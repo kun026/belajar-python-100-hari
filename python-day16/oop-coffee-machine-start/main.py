@@ -17,6 +17,5 @@ while is_on:
         cash_register.report()
     else:
         order = menu.find_drink(choice)
-        if coffee_machine.is_resource_sufficient(order):
-            if cash_register.make_payment(order.cost):
-                coffee_machine.make_coffee(order)
+        if coffee_machine.is_resource_sufficient(order) and cash_register.make_payment(order.cost):
+            coffee_machine.make_coffee(order)

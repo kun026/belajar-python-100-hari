@@ -44,6 +44,7 @@ def calculator():
             num1 = answer
         else:
             end_calc = True
+            # Recursion => pada dasarnya adalah gagasan bahwa anda dapat memiliki fungsi yg memanggil dirinya sendiri.
             calculator()
             
 calculator()

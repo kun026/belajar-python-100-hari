@@ -27,11 +27,29 @@ while game_is_on:
 
     snake.move()
 
+    # Detect collision with food.
     if snake.head.distance(food) < 15:
         food.refresh()
+        snake.extend()
         score.increase_score()
 
+    # Detect collision with wall.
+    if snake.head.xcor() > 295 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -295:
+            game_is_on = False
+            score.game_over()
 
+    # Detect collision with tail.
+    for segment in snake.segments[1:]:
+            if snake.head.distance(segment) < 10:
+                game_is_on = False
+                score.game_over()
+
+""" 
+piano_keys = ["a", "b", "c", "d", "e", "f", "g"]
+
+# Reverse list with slicing tricks
+print(piano_keys[::-1])
+"""
 
 
 

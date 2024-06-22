@@ -27,13 +27,14 @@ while len(guessed_states) < len(all_states):
     answer_state = screen.textinput(title=f"{len(guessed_states)}/{len(all_states)} States Correct",
                                     prompt="Whats's another state's name?").title()
     if answer_state == "Exit":
-        missing_states = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        missing_states = [state for state in all_states if state not in guessed_states]
+
+        # for state in all_states:
+        #     if state not in guessed_states:
+        #         missing_states.append(state)
 
         new_data = {
-            "missing state": missing_states
+            "state": missing_states
         }
 
         df = pandas.DataFrame(new_data)

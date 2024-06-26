@@ -27,7 +27,7 @@ def display_name(*args):
 
 display_name("Prof.", "Dr.", "Ridho", "Syam")
 
-# **kwargs: Keyworded Variable-Length Arguments
+# **kwargs: Keyworded Variable-Length Arguments; type: **kwars dictionary
 def calculate(n, **kwargs):
     print(kwargs)
     # for key, value in kwargs.items():

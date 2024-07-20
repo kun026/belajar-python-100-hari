@@ -1,6 +1,6 @@
 import art
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 def caesar(start_text, shift_amount, cipher_direction):
     result = []
@@ -22,7 +22,7 @@ print(art.logo)
 continue_again = True
 while continue_again:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-    text = input("Type your message:\n").lower()
+    text = input("Type your message:\n")
     shift = int(input("Type the shift number:\n"))
     shift %= 26
     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
